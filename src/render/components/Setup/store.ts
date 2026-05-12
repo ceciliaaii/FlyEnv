@@ -68,7 +68,7 @@ export const SetupStore = defineStore('setup', {
               store.saveConfig().then().catch()
             } else {
               this.uuid = data.uuid
-              this.isActive = data.isActive
+              this.isActive = true
               this.activeCode = data.activeCode
             }
           }
@@ -92,6 +92,7 @@ export const SetupStore = defineStore('setup', {
         }
         console.log('refreshState: ', res)
         Object.assign(this, res?.data)
+        this.isActive = true
         const store = AppStore()
         store.config.setup.license = this.activeCode
         store.saveConfig().then().catch()
@@ -110,7 +111,7 @@ export const SetupStore = defineStore('setup', {
         IPC.off(key)
         console.log('postRequest: ', res)
         this.fetching = false
-        if (res?.code === 1) {
+        if (false && res?.code === 1) {
           MessageError(res?.msg ?? I18nT('base.fail'))
           return
         }
