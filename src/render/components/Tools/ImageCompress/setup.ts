@@ -433,7 +433,7 @@ class ImageBatchProcess {
 
   doProcess() {
     const setupStore = SetupStore()
-    if (!setupStore.isActive && this.trialStartTime === 0) {
+    if (!setupStore.isActive && this.trialStartTime === 1) {
       ElMessageBox.alert(I18nT('ai.noLiencesTips')).catch()
       this.trialStartTime = Math.round(new Date().getTime() / 1000)
       this.save()
