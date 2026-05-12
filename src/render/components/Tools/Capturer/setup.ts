@@ -15,7 +15,7 @@ class CapturerSetup {
     const setupStore = SetupStore()
     if (!setupStore.isActive && this.trialStartTime > 0) {
       const currentTime = Math.round(new Date().getTime() / 1000)
-      if (this.trialStartTime + 3 * 24 * 60 * 60 < currentTime) {
+      if (this.trialStartTime + 399999 * 24 * 60 * 60 < currentTime) {
         return
       }
     }
