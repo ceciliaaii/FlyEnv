@@ -118,7 +118,7 @@
   const setupStore = SetupStore()
 
   const isLock = computed(() => {
-    return !setupStore.isActive && CodeLibrary.items.length > 2 && !props.item?.id
+    return false
   })
 
   const groups = computed(() => {
