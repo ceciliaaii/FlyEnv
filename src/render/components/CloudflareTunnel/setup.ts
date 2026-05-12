@@ -134,11 +134,10 @@ export const Setup = () => {
     }).then()
   }
 
-  const setupStore = SetupStore()
   const isLocked = computed(() => {
-    if (setupStore.isActive) {
-      return false
-    }
+    return false
+  })
+
 
     return CloudflareTunnelStore.items.length > 0
   })
