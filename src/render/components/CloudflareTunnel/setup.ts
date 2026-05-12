@@ -138,10 +138,6 @@ export const Setup = () => {
     return false
   })
 
-
-    return CloudflareTunnelStore.items.length > 0
-  })
-
   return {
     add,
     edit,
