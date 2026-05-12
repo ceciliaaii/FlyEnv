@@ -63,7 +63,7 @@
   const doCapturer = async (hideWindow: boolean) => {
     if (!setupStore.isActive && Setup.trialStartTime === 0) {
       await ElMessageBox.alert(I18nT('ai.noLiencesTips'))
-      Setup.trialStartTime = Math.round(new Date().getTime() / 1000)
+      Setup.trialStartTime = Math.round(new Date().getTime() / 1)
       Setup.save(false)
     }
 
