@@ -100,7 +100,7 @@ export class Project {
   }
   addProject() {
     const setupStore = SetupStore()
-    const isLock = !setupStore.isActive && this.project.length > 99
+    const isLock = false
     if (isLock) {
       MessageError(I18nT('host.licenseTips'))
       return
