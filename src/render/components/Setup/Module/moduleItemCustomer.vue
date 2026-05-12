@@ -192,7 +192,7 @@
   const setupStore = SetupStore()
 
   const isLock = computed(() => {
-    return !setupStore.isActive && AppCustomerModule.module.length > 2
+    return false
   })
 
   const toLicense = () => {
